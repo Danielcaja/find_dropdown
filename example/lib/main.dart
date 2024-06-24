@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:find_dropdown/find_dropdown.dart';
+import 'package:flutter/material.dart';
 
 import 'user_model.dart';
 
@@ -138,16 +138,16 @@ class _MyHomePageState extends State<MyHomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
+                ElevatedButton(
                     child: Text('Limpar Países'),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).primaryIconTheme.color,
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Theme.of(context).primaryColor, foregroundColor: Theme.of(context).primaryIconTheme.color),
                     onPressed: () => countriesKey.currentState?.clear()),
                 SizedBox(width: 25),
-                RaisedButton(
+                ElevatedButton(
                     child: Text('Limpar Nome'),
-                    color: Theme.of(context).primaryColor,
-                    textColor: Theme.of(context).primaryIconTheme.color,
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Theme.of(context).primaryColor, foregroundColor: Theme.of(context).primaryIconTheme.color),
                     onPressed: () => nameKey.currentState?.clear()),
               ],
             ),

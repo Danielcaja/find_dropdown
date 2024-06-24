@@ -180,7 +180,7 @@ class FindDropdownState<T> extends State<FindDropdown<T>> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         if (widget.label != null && widget.labelVisible)
-          Text(widget.label!, style: widget.labelStyle ?? Theme.of(context).textTheme.subtitle1),
+          Text(widget.label!, style: widget.labelStyle ?? Theme.of(context).textTheme.titleMedium),
         if (widget.label != null) SizedBox(height: 5),
         Column(
           mainAxisSize: MainAxisSize.min,
@@ -209,9 +209,7 @@ class FindDropdownState<T> extends State<FindDropdown<T>> {
                       itemBuilder: widget.dropdownItemBuilder,
                       selectedValue: selectedValue,
                       searchBoxDecoration: widget.searchBoxDecoration,
-                      searchHint: widget.searchHint,
                       backgroundColor: widget.backgroundColor,
-                      titleStyle: widget.titleStyle,
                       autofocus: widget.autofocus ?? false,
                       constraints: widget.constraints,
                       emptyBuilder: widget.emptyBuilder,
